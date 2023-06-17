@@ -22,10 +22,11 @@ export default function App() {
   function resetField() {
     setText("");
   }
-  let drums=drumPads.map((item)=><div key={item.id}><div className="drum-pad" id={item.id} onClick={()=>{playDrums(item.letter),showText(item.text)}}>
+ let drums = drumPads.map((item)=><div key={item.id}><div className="drum-pad" id={item.id} onClick={()=>{playDrums(item.letter),showText(item.text)}}>
     {item.letter}
  <audio className="clip" id={item.letter} src={item.src}></audio></div>
   </div>);
+  console.log(drums);
   return (
     <div className="Drums">
       <h1>Drum Machine</h1>
